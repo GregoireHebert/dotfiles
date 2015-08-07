@@ -106,3 +106,5 @@ __set_prompt () {
 }
 PROMPT_COMMAND='__set_prompt'
 trap 'echo -ne "\e[0m"' DEBUG
+
+

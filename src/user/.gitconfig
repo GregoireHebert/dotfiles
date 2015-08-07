@@ -1,9 +1,42 @@
 [core]
 	editor = vim
-	excludesfile = /home/morgan/.gitignore_global
+	excludesfile = /home/gregoire/.gitignore_global
 [user]
-	email = morgan.auchede@gmail.com
-	name = Morgan Auchede
+	email = gregoirehebert@gheb.fr
+	name = Grégoire Hébert
 [alias]
-	lg = log --graph --pretty=tformat:\"%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset\" --abbrev-commit --date=relative
-	oops = commit --amend -C HEAD
+    # edit last commit
+    amend = commit --amend -C HEAD
+    
+    # cancel last local commit
+    undo = reset --soft HEAD^
+    
+    # rapid checkup
+    changes = diff --name-status
+    dic = diff --cached
+    diffstat = diff --stat
+    
+    # condensed logs
+    hist = log --pretty=oneline --abbrev-commit --graph --decorate
+    lg = log --graph --pretty=tformat:\"%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset\" --abbrev-commit --date=relative
+
+    
+    # show changes since last pull
+    lc = !git oneline ORIG_HEAD.. --stat --no-merges
+    
+    # add some files to commit
+    addm = !git ls-files -m -z | xargs -0 git-add && git status
+    addu = !git ls-files -o --exclude-standard -z | xargs -0 git-add && git status
+    rmm = !git ls-files -d -z | xargs -0 git-rm && git status
+    
+    # open on textMate last uncommited files
+    mate = !git ls-files -m -z | xargs -0 mate
+    mateall = !git ls-files -m -o --exclude-standard -z | xargs -0 mate
+    
+    # open on vi last uncommited files
+    vi = !vi $(git ls-files -m -z)
+    viall = !vi $(git ls-files -m -o --exclude-standard -z)
+    
+    # show all users that did commit
+    who = shortlog -sne
+
