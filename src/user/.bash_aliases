@@ -43,4 +43,4 @@ alias AI='php app/console assets:install --symlink && php app/console assetic:du
 # git
 
 # clean branches not on remote
-alias git-clean-branch='git branch -r | awk "{print substr($1,8)}" | egrep -v -f /dev/fd/0 <(git branch) | awk "{print $1}" | xargs git branch -D'
+alias git-clean-branch="git branch -r | awk '{print substr(\$1,8)}' | egrep -v -f /dev/fd/0 <(git branch) | awk '{print \$1}' | xargs git branch -D"
