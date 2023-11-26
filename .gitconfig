@@ -1,0 +1,61 @@
+[user]
+	name = Grégoire Hébert
+	email = gregoire@les-tilleuls.coop
+	signingkey = B9333CF78697BE7F
+[core]
+	excludesfile = /Users/gheb/.gitignore_global
+[difftool]
+	prompt = false
+[color]
+	branch = auto
+	status = auto
+	interactive = auto
+	diff = auto
+[alias]
+    # edit last commit
+    amend = commit --amend
+    
+    # cancel last local commit
+    undo = reset --soft HEAD^
+    
+    # rapid checkup
+    changes = diff --name-status
+    dic = diff --cached
+    diffstat = diff --stat
+    st = status -sb
+    
+    # condensed logs
+    hist = log --pretty=oneline --abbrev-commit --graph --decorate
+    
+    # show changes since last pull
+    lc = !git log --pretty=oneline ORIG_HEAD.. --stat --no-merges
+    
+    # add some files to commit
+    addm = !git ls-files -m -z | xargs -0 git-add && git status
+    addu = !git ls-files -o --exclude-standard -z | xargs -0 git-add && git status
+    rmm = !git ls-files -d -z | xargs -0 git-rm && git status
+    
+    # show all users that did commit
+    who = shortlog -sne
+	supdate = submodule update --remote --merge
+	spush = push --recurse-submodules=on-demand
+	sdiff = !git diff && git submodule foreach 'git diff'
+
+   ro = "!f() { git rebase --onto master $1 $2; }; f"
+	fixup = commit --fixup
+	ri = rebase -i --autosquash
+ 
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[rerere]
+	enabled = true
+[tag]
+	sort = version:refname
+[merge]
+	tool = nvim
+[init]
+	defaultBranch = main
+[diff]
+	tool = nvim

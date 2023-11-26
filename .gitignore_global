@@ -1,0 +1,13 @@
+.idea
+autom4te.cache/
+.php_cs.cache
+app/bootstrap.php.cache
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.phpunit.result.cache
+

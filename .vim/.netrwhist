@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/usr/share/terminfo'
+let g:netrw_dirhist_0='/usr/share'
+let g:netrw_dirhist_9='/usr/share/terminfo'
+let g:netrw_dirhist_8='/Users/gheb/travaux/os/api-platform-batch/config'
+let g:netrw_dirhist_7='/Users/gheb/travaux/os/api-platform-batch'
+let g:netrw_dirhist_6='/Users/gheb/travaux/formations/git'
+let g:netrw_dirhist_5='/Users/gheb/.config/nvim'
+let g:netrw_dirhist_4='/Users/gheb/.config'
+let g:netrw_dirhist_3='/Users/gheb/.config/nvim'
+let g:netrw_dirhist_2='/Users/gheb/travaux/formations/git'
