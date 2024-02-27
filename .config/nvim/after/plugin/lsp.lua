@@ -17,7 +17,30 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'angularls', 'bashls', 'csharp_ls', 'cssls', 'dockerls', 'docker_compose_language_service', 'emmet_ls', 'gopls', 'grammarly', 'html', 'helm_ls', 'jsonls', 'remark_ls', 'spectral', 'phpactor', 'sqlls', 'svelte', 'stimulus_ls', 'tailwindcss', 'terraformls', 'lemminx', 'yamlls'},
+  ensure_installed = {
+      'tsserver', 
+      'angularls', 
+      'bashls', 
+      'csharp_ls', 
+      'cssls', 
+      'dockerls', 
+      'docker_compose_language_service', 
+      'emmet_ls', 
+      'gopls', 
+      'grammarly', 
+      'html', 
+      'helm_ls', 
+      'jsonls', 
+      'spectral', 
+      'phpactor', 
+      'sqlls', 
+      'svelte', 
+      'stimulus_ls', 
+      'tailwindcss', 
+      'terraformls', 
+      'lemminx', 
+      'yamlls'
+  },
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()

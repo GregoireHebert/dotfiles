@@ -1,7 +1,7 @@
 [user]
 	name = Grégoire Hébert
 	email = gregoire@les-tilleuls.coop
-	signingkey = B9333CF78697BE7F
+	signingkey = /Users/gheb/.ssh/id_rsa.pub
 [core]
 	excludesfile = /Users/gheb/.gitignore_global
 [difftool]
@@ -49,6 +49,7 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+	format = ssh
 [rerere]
 	enabled = true
 [tag]

@@ -46,6 +46,7 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux
+#fi
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

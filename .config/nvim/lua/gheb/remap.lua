@@ -32,7 +32,7 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set("n", "Q", "<nop>")
 
 -- tmux window to navigate projects and come back with C-a L
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux new tmux-sessionizer<CR>")
 
 -- quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
