@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export LANG=fr_FR.UTF-8
 export ZSH_CONFIG="${HOME}/.config/zsh"
 export PATH=/Users/gheb/.composer/vendor/bin:$PATH
