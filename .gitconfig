@@ -4,6 +4,8 @@
 	signingkey = /Users/gheb/.ssh/id_rsa.pub
 [core]
 	excludesfile = /Users/gheb/.gitignore_global
+	ignorecase = false
+	autocrlf = input
 [difftool]
 	prompt = false
 [color]
@@ -37,14 +39,18 @@
     
     # show all users that did commit
     who = shortlog -sne
-	supdate = submodule update --remote --merge
-	spush = push --recurse-submodules=on-demand
-	sdiff = !git diff && git submodule foreach 'git diff'
+    supdate = submodule update --remote --merge
+    spush = push --recurse-submodules=on-demand
+    sdiff = !git diff && git submodule foreach 'git diff'
 
-   ro = "!f() { git rebase --onto master $1 $2; }; f"
-	fixup = commit --fixup
-	ri = rebase -i --autosquash
- 
+    #show logs of when something changed based on a string
+    when = log -S -p
+
+    ro = "!f() { git rebase --onto master $1 $2; }; f"
+    fixup = commit --fixup
+    ri = rebase -i --autosquash
+    pr = pull --rebase
+
 [commit]
 	gpgsign = true
 [gpg]
@@ -60,3 +66,10 @@
 	defaultBranch = main
 [diff]
 	tool = nvim
+	compactionHeuristic = 1
+[pager]
+	log = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
+	diff = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
+[interactive]
+	diffFilter = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight

@@ -42,3 +42,5 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- replace on the all document the word we're on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+vim.api.nvim_set_keymap("n", "<CR>", "<cmd>FineCmdline<CR>", {noremap = true})

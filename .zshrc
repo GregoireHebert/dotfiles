@@ -8,10 +8,15 @@ fi
 export EDITOR='nvim'
 export LANG=fr_FR.UTF-8
 export ZSH_CONFIG="${HOME}/.config/zsh"
-export PATH=/Users/gheb/.composer/vendor/bin:$PATH
+export PATH="/opt/homebrew/Cellar:$PATH"
+export PATH="/Users/gheb/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/bison/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Users/gheb/.local/bin:$PATH"
+
+export GOPATH="$HOME"
+export PATH="$GOPATH/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -50,3 +55,14 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 #  exec tmux
 #fi
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.3.5
+
+# Created by `pipx` on 2025-04-06 09:35:57
+export PATH="$PATH:/Users/gheb/.local/bin"

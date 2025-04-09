@@ -9,3 +9,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 export PATH
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Created by `pipx` on 2025-04-06 09:35:57
+export PATH="$PATH:/Users/gheb/.local/bin"

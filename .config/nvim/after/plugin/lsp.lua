@@ -40,6 +40,7 @@ require('mason-lspconfig').setup({
       'terraformls', 
       'lemminx', 
       'yamlls'
+      'harper_ls',  
   },
   handlers = {
     lsp_zero.default_setup,
